@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div className="navbar">
+            <div className="navbar-content">
+                <div className="navbar-left">
+                   <Link href="/">
+                        <Image src="/assets/images/mrkim-logo.svg" width={160} height={50} alt="mr. kim logo" priority className="imagelogo"/>
+                    </Link>
+                   
+                    
+                   
+                    <div className="plus">
+                        <Link href="/categories">Get Service <Image src="/assets/images/plus2.svg" width={10} height={10} alt="Plus" priority className="imageplus" /></Link>
+                       </div>
+                    
+                </div>
+                <div className="navbar-right">
+                       <div className="onsign">
+                                <Link href="/">Home</Link>
+                                <Link href="/jobs">Jobs</Link>
+                                <Link href="/categories">Categories</Link>
+                                <Link href="/talent">Talent</Link>
+                                 <Link href="/premium">Premium</Link>        
+                                <SignInButton/>
+                            </div>
+                </div>
+               <div className="mobilemenu">
+                    <NavbarMobile />
+                </div>
+            </div>
+        </div>
+    {% block content%}
+    {% endblock %}
+    <section className='mainafoot'>
+        <div className='mainfotter'>
+          <div className='spotsone'>
+            <h4>Mr.KIM ... You Name It! We Do It!</h4>
+            <ul>
+              <li>
+                <Link href="/about"><p>About Us</p></Link>
+              </li>
+              <li>
+                <Link href="/whoweare"><p>Who We Are</p></Link>
+              </li>
+              <li>
+                <Link href="/corevalues"><p>Our Core Values</p></Link>
+              </li>
+              <li>
+                <Link href="/corporatereposnsibility"><p>Corporate Responsibility</p></Link>
+              </li>
+                 
+            </ul>
+          </div>
+          <div className='spotstwo'>
+            <h4>Customers</h4>
+            <ul>
+              <li>
+                <Link href="/howitworks"><p>How It Works</p></Link>
+              </li>
+              <li>
+                <Link href="/getapp"><p>Get The App</p></Link>
+              </li>
+              <li>
+                <Link href="/whykim"><p>Why choose Mr.KIM</p></Link>
+              </li>
+            </ul>
+          </div>
+          <div className='spotsthree'>
+            <h4>Resources</h4>
+            <ul>
+              <li>
+                <Link href="/financing"><p>Financing My Project</p></Link>
+              </li>
+              <li>
+                <Link href="/solution"><p>Solution Center & Expert Tips</p></Link>
+              </li>
+             
+              <li>
+                <Link href="/signup"><p>Sign Up As Pro</p></Link>
+              </li>
+              <li>
+                <Link href="/legal"><p>Legal</p></Link>
+              </li>
+              <li>
+                <Link href="/safety"><p>Safety</p></Link>
+              </li>
+
+              
+              <li>
+                <Link href="/faq"><p>FAQs</p></Link>
+              </li>
+            </ul>
+          </div>
+          <div className='spotsfour'>
+            <h4>Support</h4>
+            <ul>
+              <li>
+                <Link href="/help"><p>Help</p></Link>
+              </li>
+              
+              <li>
+                <Link href="/contacts"><p>Contact Us</p></Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>
+  </body>
+</html>

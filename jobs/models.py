@@ -14,7 +14,7 @@ class Category(models.Model):
 
 class MajorCategory(models.Model):
     image = models.ImageField(null=True, blank=True, upload_to='images/category/subcats')
-    category = models.ForeignKey(Category, null=False, blank=False, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
     name= models.CharField(max_length=50)
 
     class Meta:

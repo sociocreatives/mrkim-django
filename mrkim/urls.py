@@ -19,10 +19,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from mpesa.urls import mpesa_urls
+from dashboard import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('jobs.urls')),
+    path('', include('website.urls')),
+    path('jobs', include('jobs.urls')),
     path('blog/', include('blog.urls')),
     path('mpesa/', include(mpesa_urls)),
+    path('accounts/', include('allauth.urls')),
+    path('accounts/profile/', views.profile, name='profile'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -9,8 +9,8 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-class Post(models.Model):
-    author = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE, default='admin')
+class Tips(models.Model):
+    author = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -23,3 +23,4 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
+

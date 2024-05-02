@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    My Page
+{% endblock %}
+
+
+{% block content %}
+    <section className='outer'>
+    <section className="hero-section" >
+      <div className="hero-content">
+        <div className="hero-left">
+          <div className='location_piece'>
+          <Image src="/assets/images/SVG/location.svg" width={30} height={30} alt="location" priority className="location" />
+              {% comment %} {userLocation && (
+                <p>{userLocation}</p>
+                  )}
+                  {error && (
+                  <p>{error}</p>
+              )} {% endcomment %}
+          </div> 
+            <h1 className="hero-title">Get the right local pro in your area for any project.</h1>
+            <div className='heroinput'>
+              <input type="text" placeholder='Search by Category' />
+                <button >Search</button>
+              </div>
+                <p>We have the best SKILLS and custom services for your PROJECT <span>Go Premium</span> </p>
+          </div>
+        <div className="hero-right" style={imageStyle}>
+            
+      </div>
+      </div>
+
+      
+      </section>
+      </section>
+{% endblock %}
