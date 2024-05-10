@@ -84,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mrkim.wsgi.application'
+WSGI_APPLICATION = 'mrkim.wsgi.app'
 
 
 # Database
