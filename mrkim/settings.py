@@ -28,7 +28,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     "heroku.com",
-    "mrkim-59e5f5d80b70.herokuapp.com"
+    "mrkim-59e5f5d80b70.herokuapp.com",
+    "vercel.com"
 ]
 
 
